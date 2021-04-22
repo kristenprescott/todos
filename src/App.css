@@ -1,0 +1,293 @@
+/* =============== FONTS =============== */
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Patrick+Hand&family=Calistoga&family=Handlee&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Pen+Script&family=Quicksand:wght@300;400;500;600;700&family=Shadows+Into+Light&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"); */
+
+/* =============== RESETS =============== */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+html {
+  font-size: 10px;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* =============== COLORS =============== */
+/* === raisin black === */
+/* 2B262E */
+/* #2F2A33 */
+/* === black coffee === */
+/* 342e38 */
+/* 39333e */
+/* #3f3844 */
+/* === cultured === */
+/* (gainsboro) #dfddde */
+/* f5f4f4 */
+/* === floralwhite === */
+/* #f8f8ef */
+/* === burnt sienna === */
+/* e9724c */
+
+/* =============== STYLES =============== */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  color: #3f3844;
+  background-color: #fbf8ef;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  background-color: #e9724c;
+}
+
+h1.title {
+  font-size: 5.6rem;
+  font-family: "Calistoga", cursive;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  background-color: #3f3844;
+  border: 0.2vmax solid #3f3844;
+  border-radius: 0.3rem;
+}
+
+input {
+  background-color: #fbf8ef;
+}
+
+/* === btns === */
+.btn {
+  margin: 7%;
+  color: #3f3844;
+  background-color: #fbf8ef;
+  border: 1px solid #3f3844;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+.del-btn {
+  margin: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 8vmax;
+  height: 3vmax;
+  background-color: #fbf8ef;
+}
+.submit-btn {
+  width: 12vmax;
+  height: 4vmax;
+}
+
+form {
+  margin: 10%;
+  padding: 5%;
+  height: 10vmax;
+  width: 25vmax;
+  display: flex;
+  font-size: 2.2rem;
+}
+
+input {
+  color: #3f3844;
+  font-size: 1.8rem;
+}
+
+.add-container {
+  /* flex-col */
+  margin: 0.5%;
+}
+.add-title-wrapper {
+  padding: 1%;
+  margin-top: 2%;
+}
+.add-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.add-form {
+  display: flex;
+  flex-direction: column;
+}
+.subj-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item-container {
+  margin: 1vmin;
+  margin-left: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  /* grid-container */
+  margin: 0.5%;
+}
+
+.list-item {
+  /* background-color: lightgrey; */
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0.5vmax;
+  font-family: "Handlee", cursive;
+  font-family: "Patrick Hand", cursive;
+}
+
+.li-subj {
+  /* background-color: pink; */
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+.li-details {
+  /* background-color: powderblue; */
+  font-size: 2.2rem;
+}
+
+/* === CHECKBOX === */
+
+/* Customize the label (the container) */
+.checkmark-container {
+  /* display: block; */
+  /* position: relative; */
+  /* padding-left: 35px; */
+  /* margin-bottom: 12px; */
+  cursor: pointer;
+  /* font-size: 0.01rem; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkmark-container input {
+  /* position: absolute; */
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #3f3844;
+}
+
+/* On mouse-over, add a grey background color */
+.checkmark-container:hover input ~ .checkmark {
+  background-color: #fbf8ef;
+  color: #e9724c;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkmark-container input:checked ~ .checkmark {
+  color: #fbf8ef;
+  background-color: #6f8ab7;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  /* position: absolute; */
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkmark-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkmark-container .checkmark:after {
+  /* left: 9px; */
+  /* top: 5px; */
+  height: 1rem;
+  width: 1.5rem;
+  border: solid #3f3844;
+  border-width: 0 3px 3px 0;
+  border-radius: 2px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* === RESPONSIVE === */
+
+/* EDIT BELOW */
+/* find typical screen sizes to add, if not basic edits */
+/* @media screen and (min-width: 1024px) {
+  aside,
+  main {
+    width: 50%;
+  }
+
+  footer {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  aside {
+    width: 30%;
+  }
+  main {
+    width: 70%;
+  }
+} */
