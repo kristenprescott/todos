@@ -51,26 +51,12 @@ export default function App() {
   const handleDelete = async (e, id, idx) => {
     // make del req to api
     try {
-<<<<<<< HEAD
       const res = await fetch(`${process.env.REACT_APP_API_URL}${id}`, {
         method: "DELETE",
         headers: {
           "Content-type": "application/json",
         },
       });
-=======
-      const res = await fetch(
-        `${process.env.REACT_APP_API_URL}${id}`,
-        // `https://todos-by-prescott.herokuapp.com/todos/${id}`,
-
-        {
-          method: "DELETE",
-          headers: {
-            "Content-type": "application/json",
-          },
-        }
-      );
->>>>>>> 64a09cf36b8afc00a94faefa1d9f21549c05105d
       const data = res.json();
       // remove todo item from todos
       const copyTodos = [...todos];
