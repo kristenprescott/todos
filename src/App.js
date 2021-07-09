@@ -11,9 +11,7 @@ export default function App() {
     (async () => {
       try {
         //
-        const res = await fetch(
-          "https://todos-by-prescott.herokuapp.com/todos/"
-        );
+        const res = await fetch(`${process.env.REACT_APP_API_URL}`);
         const data = await res.json();
         setTodos(data);
       } catch (error) {
@@ -27,16 +25,13 @@ export default function App() {
     e.preventDefault();
 
     try {
-      const response = await fetch(
-        "https://todos-by-prescott.herokuapp.com/todos/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newTodo),
-        }
-      );
+      const response = await fetch(`${process.env.REACT_APP_API_URL}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newTodo),
+      });
       const data = await response.json();
       setTodos([...todos, data]);
       // clear input after submission
@@ -57,7 +52,9 @@ export default function App() {
     // make del req to api
     try {
       const res = await fetch(
-        `https://todos-by-prescott.herokuapp.com/todos/${id}`,
+        `${process.env.REACT_APP_API_URL}${id}`,
+        // `https://todos-by-prescott.herokuapp.com/todos/${id}`,
+
         {
           method: "DELETE",
           headers: {
@@ -72,6 +69,7 @@ export default function App() {
       copyTodos.splice(idx, 1);
       // setTodos
       setTodos(copyTodos);
+      console.log("todo data: ", data);
     } catch (error) {
       console.error(error);
     }
